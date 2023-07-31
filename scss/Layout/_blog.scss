@@ -1,0 +1,93 @@
+.blog {
+    padding: $sp-100 0;
+    .blog__title {
+        text-align: center;
+        margin-bottom: $sp-100;
+        h3 {
+            @include styleText($cl-black-1, $fs-24, $fw-400, $lt-2, null);
+            @include styleTitle;
+        }
+        p {
+            @include styleText($cl-gray-0, null, null, null, $lh-25);
+            width: 45%;
+            margin: 0 auto;
+        }
+    }
+    .blog__content {
+        width: 75%;
+        margin: 0 auto;
+        .blog__left {
+            .blog__img {
+                position: relative;
+                img {
+                    width: 100%;
+                }
+                .blog__overplay {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    padding: $sp-10 0 $sp-10 $sp-10;          
+                    background-color: rgba(0, 0, 0, 0.5);
+                    p {
+                        color: $cl-white-0;
+                    }
+                }
+            }
+        }
+        .blog__right {
+            display: flex;
+            align-items: center;
+            padding-left: $sp-50;
+            .blog__tag,
+            .blog__time {
+                a {
+                    @include styleText($cl-gray-6, $fs-13, $fw-400, $lt-1, null);
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    margin-right: $sp-5;
+                    transition: 0.3s;
+                    &:hover {
+                        color: $cl-gold-0;
+                    }
+                }
+            }
+            .blog__message {
+                a {
+                    @include styleText($cl-black-1, $fs-20 - 2, null, $lt-1, null);
+                    text-decoration: none;
+                    transition: 0.3s;
+                    &:hover {
+                        color: $cl-gold-0;
+                    }
+                }
+            }
+            p {
+                @include styleText($cl-gray-0, null, null, null, $lh-30);
+                margin: $sp-30 0;
+            }
+            .blog__read {
+                text-decoration: none;
+                @include styleText($cl-gray-7, $fs-15 + 3, $fw-400, $lt-1, null);
+                transition: 0.3s;
+                &:hover {
+                    color: $cl-black-2;
+                }
+            }
+        }
+    }
+    @include responsive("ex-large") {
+        .blog__content {
+            width: 90%;
+        }
+    }
+
+    @include responsive("large") {
+        .blog__content {
+            .blog__right {
+                margin-top: $sp-30;
+                padding-left: calc(var(--bs-gutter-x) * 0.5);
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 999;
+    #header__content {
+        background: transparent;
+        transition: 0.5s;
+        #header__navbar { 
+            height: 100px;
+            transition: 0.5s;
+            #main-logo {
+                height: 100%;
+                margin-left: $sp-20;
+            }
+            .collapse {
+                .nav-item {
+                    padding: 0 $sp-12;
+                    .nav-link {
+                        font-size: $fs-13;
+                        color: $cl-white-0;
+                        white-space: nowrap;
+                        &.active {
+                            color: $cl-gold-0;
+                        }
+                        &:hover {
+                            color: $cl-gold-0;
+                        }
+                        i {
+                            margin-right: $sp-5;
+                        }
+                    }
+                }
+                .line {
+                    color: $cl-white-0;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    @include responsive("ex-large") {
+        #header__navbar {
+            .collapse {
+                .nav-item {
+                    padding: 0 $sp-5 !important;
+                }
+            }
+        }
+    }
+    @include responsive("medium") {
+        #header__content {
+            #header__navbar {
+                .collapse {
+                    background-color: black;
+                    #main-nav {
+                        width: 90vw;
+                        margin: 0 auto;
+                        background-color: $cl-white-0;
+                        // transition: 0.5s;
+                        .nav-item {
+                            padding: 0 0 0 $sp-20 !important;
+                            border-bottom: 1px solid #f0f0f0;
+                            .nav-link {
+                                display: flex;
+                                justify-content: space-between;
+                                align-self: center;
+                                color: black;
+                                margin: auto 0;
+                                padding: 0;
+                                .plus {
+                                    padding: $sp-12 0 !important;
+                                    &:last-child {
+                                        padding: $sp-12 $sp-20 !important;
+                                        border-left: 1px solid #f0f0f0;
+                                    }
+                                }
+                                .text {
+                                    margin: auto 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .navbar-toggler {
+                    margin-right: $sp-20;
+                    i {
+                        color: $cl-white-0;
+                        font-size: $fs-24;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+.note {
+    background-image: url(../../img/intro.png);
+    background-attachment: fixed;
+    padding: $sp-100 0;
+    .note__content {
+        width: 75%;
+        margin: 0 auto;
+        .note__nav {
+            margin-bottom: $sp-30;
+            .nav-item {
+                width: 20%;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    margin: 0 auto;
+                    border-right: 15px solid transparent;
+                    border-left: 15px solid transparent;
+                    border-top: 15px solid;
+                    border-top-color: transparent;
+                    transition: 0.15s;
+                }
+                &.active1::after{
+                    border-top-color: white;
+                }
+                &:hover {
+                    &::after {
+                        border-top-color: white;
+                    }
+                    .nav-link {
+                        background-color: #fff;
+                    }
+                }
+                .nav-link {
+                    width: 90%;
+                    margin: 0 auto;
+                    padding: $sp-40 0;
+                    border: none;
+                    border-radius: 0;
+                    background-color: rgba(34, 34, 34, 0.05);
+                    &.active{
+                        background-color: #fff;
+                    }
+                    i {
+                        font-size: $sp-36;
+                        color: $cl-black-0;
+                    }
+                }
+            }
+        }
+        .note__tab {
+            width: 98%;
+            margin: 0 auto;
+            .tab-pane {
+                h5 {
+                    @include styleText($cl-gray-0, $fs-13 + 1, null, null, null);
+                }
+                h2 {
+                    @include styleText($cl-black-1, $fs-30, $fw-400, $lt-2, $lh-1_5);
+                    margin-bottom: $sp-40;
+                }
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    @include responsive("ex-large") {
+        .note__content {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    @include responsive("large") {
+        .note__content {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    @include responsive("small") {
+        .note__content {
+            .note__nav {
+                .nav-item {
+                    .nav-link {
+                        padding: $sp-20 0;
+                        i {
+                            font-size: $fs-24;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

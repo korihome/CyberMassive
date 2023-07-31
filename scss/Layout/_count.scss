@@ -1,0 +1,27 @@
+.count {
+    padding: $sp-100 0;
+    background-color: $cl-black-4;
+    .count__content {
+        width: 80%;
+        margin: 0 auto;
+        .count__item {
+            text-align: center;
+            .count__number {
+                i {
+                    color: $cl-white-0;
+                    font-size: $fs-36;
+                    margin-right: $sp-10;
+                }
+                .count__up {
+                    @include styleText($cl-white-0, $fs-36, $fw-400, $lt-2, null);
+                }
+            }
+            .count__text {
+                p {
+                    margin: $sp-10 0 0;
+                    @include styleText($cl-white-0, $fs-15, $fw-400, $lt-1, null);
+                }
+            }
+        }
+    }
+}

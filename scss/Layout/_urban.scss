@@ -1,0 +1,108 @@
+.urban {
+    background-image: url(../../img/skills.jpeg);
+    @include styleBackground;
+    .urban__left {
+        position: relative;
+        height: 100%;
+        h2 {
+            position: absolute;
+            @include styleText($cl-white-0, $fs-24, null, $lt-5 + 1, $lh-36);
+            text-align: right;
+            top: 30%;
+            right: 10%;
+        }
+    }
+    .urban__right {
+        padding: $sp-100 0;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        .urban__content {
+            width: 60%;
+            margin-left: 10%;
+            .urban__title {
+                margin-bottom: $sp-60;
+                h3 {
+                    @include styleText($cl-white-0, $fs-15 + 3, null, $lt-2, $lh-25 + 2);
+                }
+                p {
+                    @include styleText($cl-white-0, $fs-15, null, null, $lh-30);
+                }
+            }
+            .urban__list {
+                .urban__item {
+                    background-color: $cl-gray-2;
+                    margin-bottom: $sp-60;
+                    position: relative;
+                    z-index: 0;
+                    span {
+                        @include styleText($cl-black-0, $fs-13 - 3, null, $lt-1, $lh-20);
+                        padding-left: $sp-10;
+                        position: relative;
+                        z-index: 2;
+                    }
+                    .urban__load {
+                        position: absolute;
+                        background-color: $cl-white-0;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 98%;
+                        transition: 0.5s;
+                        z-index: 1;
+                        &.load1::before {
+                            content: "80%";
+                        }
+                        &.load2::before {
+                            content: "90%";
+                        }
+                        &.load3::before {
+                            content: "75%";
+                        }
+                        &::before {
+                            position: absolute;
+                            display: block;
+                            min-width: 30px;
+                            height: 15px;
+                            right: -16px;
+                            top: -100%;
+                            text-align: center;
+                            font-size: 10px;
+                            letter-spacing: 0;
+                            color: #222;
+                            padding: 0 8px;
+                            border-radius: 10px;
+                            background-color: $cl-gray-9;
+                        }
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            display: block;
+                            width: 10px;
+                            height: 10px;
+                            right: -1%;
+                            top: -40%;
+                            border-right: 5px solid transparent;
+                            border-left: 5px solid transparent;
+                            border-top: 5px solid $cl-gray-9;
+                        }    
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("medium") {
+        .urban__left {
+            h2 {
+                position: static;
+                text-align: center;
+                margin: $sp-150 auto ;
+                
+            }
+        }
+        .urban__right {
+            .urban__content {
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
+    }
+}

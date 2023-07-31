@@ -1,0 +1,32 @@
+.banner {
+    background-image: url(../img/banner.jpeg);
+    @include styleBackground;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h2 {
+        @include styleText($cl-white-0, $fs-60, $fw-300, $lt-5, null);
+    }
+    p {
+        @include styleText($cl-white-0, $fs-20, $fw-300, $lt-5 + 1, $lh-30);
+    }
+
+    @include responsive("large") {
+        h2 {
+            @include styleText($cl-white-0, $fs-60 - 10, $fw-300, $lt-5, null);
+        }
+        p {
+            @include styleText($cl-white-0, $fs-20 - 5, $fw-300, $lt-5 + 1, $lh-30);
+        }
+    }
+    @include responsive("medium") {
+        h2 {
+            @include styleText($cl-white-0, $fs-60 - 20, $fw-300, $lt-5, null);
+        }
+        p {
+            @include styleText($cl-white-0, $fs-20 - 10, $fw-300, $lt-5 + 1, $lh-30);
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.ceo {
+    padding: $sp-100 0;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.9333333333);
+    .ceo__content {
+        width: 45%;
+        margin: 0 auto;
+        .ceo__carousel {
+            .ceo__item {
+                text-align: center;
+                img {
+                    display: inline;
+                    width: 100px;
+                    border-radius: 50%;
+                }
+                .ceo__title {
+                    font-style: italic;
+                    @include styleText($cl-gray-0, $fs-15 + 1, null, null, $lh-30);
+                    margin: $sp-30 0;
+                }
+                .ceo__name {
+                    @include styleText($cl-black-2, $fs-13 + 1, null, $lt-2, null);
+                    margin: 0;
+                }
+                .ceo__pos {
+                    @include styleText($cl-gray-8, $fs-13 - 1, null, $lt-2, null);
+                    margin-bottom: $sp-20;
+                }
+            }
+            .owl-dots {
+                .owl-dot {
+                    span {
+                        background-color: #eaeaea;
+                        opacity: 0.5;
+                    }
+                    &.active {
+                        span {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("ex-large") {
+        .ceo__content {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+}

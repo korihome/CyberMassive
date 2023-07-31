@@ -1,0 +1,12 @@
+.logo {
+    padding: $sp-100 0;
+    .logo__content {
+        width: 70%;
+        margin: 0 auto;
+        .logo__item {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

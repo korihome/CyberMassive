@@ -1,0 +1,43 @@
+.showcase {
+    .showcase__title {
+        padding: $sp-80 0;
+        text-align: center;
+        h3 {
+            @include styleTitle;
+        }
+        p {
+            @include centerContent(45%);
+        }
+    }
+    .showcase__gallery {
+        .showcase__nav {
+            border: none;
+            margin-bottom: $sp-20;
+            .nav-item {
+                .nav-link {
+                    border: none;
+                    @include styleText($cl-gray-4, $fs-13 + 1, null, $lt-2 + 1, $lh-36);
+                    &.active {
+                        color: $cl-black-2;
+                    }
+                    &:hover {
+                        color: $cl-black-2;
+                    }
+                }
+            }
+        }
+        .showcase__content {
+            .showcase__img {
+                padding: 0;
+                position: relative;
+            }
+        }
+    }
+    @include responsive("large") {
+        .showcase__title {
+            p {
+                width: 60%;
+            }
+        }
+    }
+}

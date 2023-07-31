@@ -1,0 +1,73 @@
+// COLOR
+$cl-black-0: #0a0a0a;
+$cl-black-1: #333333;
+$cl-black-2: #222222;
+$cl-black-3: #292724;
+$cl-black-4: #1b1b1b;
+$cl-gray-0: #7e7e7e;
+$cl-gray-1: #e9e9e9;
+$cl-gray-2: #606060;
+$cl-gray-3: #595959;
+$cl-gray-4: #a9a8a8;
+$cl-gray-5: #757575;
+$cl-gray-6: #909090;
+$cl-gray-7: #bbb;
+$cl-gray-8: #7f7f7f;
+$cl-gray-9: #a4a4a4;
+$cl-gray-10: #6f7273;
+$cl-gold-0: #d6b161;
+$cl-white-0: #ffffff;
+$cl-white-1: #f5f5f5;
+$cl-white-2: #a2a2a2;
+$cl-tra: #ffffff00;
+
+// FONT SIZE
+$fs-20: 20px;
+$fs-30: 30px;
+$fs-36: 36px;
+$fs-13: 13px;
+$fs-60: 60px;
+$fs-24: 24px;
+$fs-15: 15px;
+
+// FONT WEIGHT
+$fw-300: 300;
+$fw-400: 400;
+
+// LINE HEIGHT
+$lh-30: 30px;
+$lh-36: 36px;
+$lh-44: 44px;
+$lh-25: 25px;
+$lh-20: 20px;
+$lh-60: 60px;
+$lh-70: 70px;
+$lh-1_5: 1.5;
+
+// LETTER SPACING
+$lt-5: 5px;
+$lt-2: 2px;
+$lt-1: 1px;
+
+// SPACING
+$sp-12: 12px;
+$sp-5: 5px;
+$sp-10: 10px;
+$sp-20: 20px;
+$sp-30: 30px;
+$sp-36: 36px;
+$sp-40: 40px;
+$sp-60: 60px;
+$sp-50: 50px;
+$sp-70: 70px; 
+$sp-80: 80px;
+$sp-100: 100px;
+$sp-150: 150px;
+
+//BREAK POINTS
+$breakpoints:(
+    'ex-large':1199.98px,
+    'large':991.98px,
+    'medium':767.98px,
+    'small':575.98px,
+)

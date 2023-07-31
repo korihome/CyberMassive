@@ -1,0 +1,88 @@
+footer {
+    background-color: $cl-black-2;
+    padding: $sp-80 0;
+    .footer__content {
+        width: 75%;
+        margin: 0 auto;
+        .footer__item:first-child {
+            a {
+                margin-bottom: $sp-20;
+                img {
+                    height: 100px;
+                }   
+            }
+            p {
+                @include styleText($cl-gray-0, $fs-15, null, null, $lh-30);
+                margin-bottom: $sp-30;
+            }
+        }
+        .footer__item:nth-child(2), .footer__item:nth-child(3) {
+            .footer__title {
+                @include styleText($cl-white-0, $fs-13 + 1, $fw-400, $lt-1, null);
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                li {
+                    border-bottom: 1px solid $cl-black-1;
+                    margin: $sp-5 0;
+                    a {
+                        text-decoration: none;
+                        white-space: nowrap;
+                        transition: 0.3s;
+                        @include styleText($cl-white-2, $fs-15, $fw-400, $lt-1, $lh-44);
+                        i {
+                            margin-right: $sp-5;
+                        }
+                        &:hover {
+                            color: $cl-gold-0;
+                        }
+                    }
+                }
+            }
+        }
+        .footer__item:last-child {
+            .footer__title {
+                @include styleText($cl-white-0, $fs-13 + 1, $fw-400, $lt-1, null);
+            }
+            .footer__imgs {
+                width: 70%;
+                .footer__img {
+                    padding: 0 0 $sp-12 $sp-12;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("large") {
+        .footer__content {
+            .footer__item:last-child {
+                .footer__imgs {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @include responsive("medium") {
+        .footer__content {
+            .footer__item:last-child {
+                .footer__imgs {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    @include responsive("small") {
+        .footer__content {
+            .footer__item:last-child {
+                .footer__imgs {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

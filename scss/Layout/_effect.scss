@@ -1,0 +1,28 @@
+.effect {
+    background-image: url(../../img/cover.jpeg);
+    @include styleBackground;
+    padding: $sp-150 0;
+    .effect__content {
+        h5 {
+            @include styleText($cl-gold-0, $fs-15 + 1, null, $lt-2 + 1, null);
+        }
+        h3 {
+            width: 90%;
+            margin: 0 auto;
+            @include styleText($cl-white-0, $fs-36, $fw-400, $lt-2, null);
+            margin-bottom: $sp-50;
+        }
+        button {
+            border: none;
+            outline: none;
+            color: $cl-white-0;
+            background-color: $cl-gold-0;
+            padding: $sp-12 + 3 $sp-30;
+            transition: 0.3s;
+            &:hover, &:focus {
+                color: $cl-black-0;
+                background-color: $cl-white-0;
+            }
+        }
+    }
+}

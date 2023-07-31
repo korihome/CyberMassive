@@ -1,0 +1,120 @@
+.showcase__overplay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 20px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        opacity: 1;
+    }
+    &:hover .showcase__top,
+    &:hover .showcase__bottom {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .showcase__top {
+        margin: $sp-30 0;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: 0.5s;
+        i {
+            @include styleText($cl-black-2, $fs-30 + 5, null, null, $lh-36 - 1);
+            transition: 0.3s ease;
+            &:hover {
+                color: $cl-gold-0;
+            }
+        }
+    }
+    .showcase__bottom {
+        transform: translateY(20px);
+        opacity: 0;
+        transition: 0.5s;
+        a {
+            text-decoration: none;
+            @include styleText($cl-black-2, $fs-15, null, $lt-5, $lh-20);
+            &:hover {
+                color: $cl-gold-0;
+            }
+        }
+        p {
+            a {
+                @include styleText($cl-gray-5, $fs-13, $fw-300, $lt-2, $lh-30);
+                text-decoration: none;
+                &:hover {
+                    color: $cl-gold-0;
+                }
+            }
+        }
+    }
+    @include responsive("large") {
+        .showcase__top {
+            margin: 20px;
+            i {
+                font-size: $fs-30;
+                line-height: 0px;
+            }
+        }
+        .showcase__bottom {
+            a {
+                font-size: $fs-13;
+                line-height: 0px;
+            }
+            p {
+                margin: 0;
+                a {
+                    font-size: $fs-13;
+                    line-height: 0px;
+                }
+            }
+        }
+    }
+    @include responsive("medium") {
+        .showcase__top {
+            margin: 0;
+            i {
+                font-size: $fs-20;
+            }
+        }
+        .showcase__bottom {
+            a {
+                font-size: $fs-13 - 5;
+            }
+            p {
+                a {
+                    font-size: $fs-13 - 3;
+                }
+            }
+        }
+    }
+}
+@include responsive("small") {
+    .showcase__overplay {
+        border: 10px solid rgba(0, 0, 0, 0.1) !important;
+        .showcase__top {
+            margin: 0;
+            i {
+                font-size: $fs-13;
+            }
+        }
+        .showcase__bottom {
+            a {
+                font-size: $fs-13 - 5;
+                letter-spacing: 2px;
+            }
+            p {
+                a {
+                    font-size: $fs-13 - 3;
+                    letter-spacing: 0px;
+                }
+            }
+        }
+    }
+}
