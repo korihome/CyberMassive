@@ -247,7 +247,7 @@ header #header__content #header__navbar .collapse .line {
 }
 
 .urban {
-  background-image: url(../../img/skills.jpeg);
+  background-image: url(../img/skills.jpeg);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -617,7 +617,7 @@ header #header__content #header__navbar .collapse .line {
 }
 
 .effect {
-  background-image: url(../../img/cover.jpeg);
+  background-image: url(../img/cover.jpeg);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -765,7 +765,7 @@ header #header__content #header__navbar .collapse .line {
 }
 
 .note {
-  background-image: url(../../img/intro.png);
+  background-image: url(../img/intro.png);
   background-attachment: fixed;
   padding: 100px 0;
 }

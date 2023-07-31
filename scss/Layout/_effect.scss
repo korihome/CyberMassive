@@ -1,5 +1,5 @@
 .effect {
-    background-image: url(../../img/cover.jpeg);
+    background-image: url(../img/cover.jpeg);
     @include styleBackground;
     padding: $sp-150 0;
     .effect__content {
